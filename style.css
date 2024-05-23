@@ -1,0 +1,1654 @@
+/*----------------------------------
+               RESET
+----------------------------------*/
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/*----------------------------------
+             VARIABLE
+----------------------------------*/
+:root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --grey: #464545;
+    --orange: #F9965B;
+    --green: #93A187;
+}
+
+/*----------------------------------
+             BASICS
+----------------------------------*/
+body {
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--white);
+}
+
+h1 {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 1.875rem;
+    font-weight: 300;
+}
+
+h2 {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 1.563rem;
+    font-weight: 300;
+}
+
+p {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+}
+
+a {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 1.25rem;
+}
+
+/*----------------------------------
+            HEADER: NAV
+----------------------------------*/
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+/*burgermenu*/
+.hamburger {
+    padding-right: 0.8rem;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.hamburger .line {
+    display: block;
+    width: 2.5rem;
+    height: 0.15rem;
+    margin-bottom: 0.625rem;
+    background-color: var(--black);
+}
+
+/* nav styles */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.logo {
+    padding-left: 0.5rem;
+    font-size: 2.5rem;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+}
+
+.logo .canggu {
+    display: block;
+    transform: translateY(-5px);
+    padding-left: 69%;
+    font-size: 1.3rem;
+}
+
+.nav__link {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 4.375rem;
+    padding-right: 0.625rem;
+    z-index: 3;
+    background-image: url(img/tilesburger.webp);
+}
+
+.nav__link a {
+    text-align: right;
+    display: block;
+    padding: 0.625rem 0;
+    font-size: 2.5rem;
+    font-family: 'Helvetica Neue', sans-serif;
+
+}
+
+.nav__link a:hover {
+    text-decoration: underline;
+}
+
+.hide {
+    display: none;
+}
+
+.nav_understregning {
+    text-decoration: underline;
+}
+
+/*----------------------------------
+             animation
+----------------------------------*/
+.w3-animate-top {
+    animation: animatetop 2s;
+}
+
+.w3-animate-left {
+    animation: animateleft 2s;
+}
+
+.w3-animate-right {
+    animation: animateright 1s;
+}
+
+/*----------------------------------
+             INDEX
+----------------------------------*/
+.forsidelogo {
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    padding-bottom: 1.5%;
+    padding-top: 1.5%;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+}
+
+.startsidebilleder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+}
+
+.startsidebilleder div {
+    position: relative;
+    width: 90%;
+    margin-bottom: 3%;
+}
+
+.startsidebilleder img {
+    width: 100%;
+    height: 45%;
+    opacity: 90%;
+    object-fit: cover;
+}
+
+.startbillede-overskrift {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: var(--white);
+    font-size: 2.5rem;
+}
+
+.startunderoverskrift {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+
+/*----------------------------------
+             CANGGU
+----------------------------------*/
+
+/*--------SLIDESHOW ØVERST--------*/
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.slides {
+    display: none;
+}
+
+.slides img {
+    width: 100%;
+    height: 40em;
+    object-fit: cover;
+}
+
+.forsidebilledetext {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    font-size: 2.5em;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    z-index: 2;
+}
+
+.forsidebilledetext span {
+    display: block;
+    position: relative;
+}
+
+.forsidebilledetext span:nth-child(1) {
+    left: -2.5em;
+}
+
+.forsidebilledetext span:nth-child(2) {
+    left: 0;
+}
+
+.forsidebilledetext span:nth-child(3) {
+    left: 2.5em;
+}
+
+/*--------content midt på side--------*/
+
+.velkomstoverskrift {
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+    padding-top: 0.8em;
+}
+
+.velkomsttext {
+    text-align: left;
+    padding-left: 1.1em;
+    padding-right: 5em;
+}
+
+.menutext a {
+    color: var(--orange);
+    text-decoration: underline;
+    text-align: right;
+    font-size: 2.5rem;
+}
+
+.menutext p {
+    font-size: 1.25rem;
+}
+
+.menutext {
+    color: var(--orange);
+    text-align: right;
+    padding-right: 1em;
+    padding-top: 3em;
+    padding-bottom: 2em;
+}
+
+.contentforside {
+    display: flex;
+    flex-direction: column;
+}
+
+.contentbilleder {
+    position: relative;
+    padding-top: 1.5em;
+}
+
+.contentbilleder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: 1 / 1;
+}
+
+.instalink {
+    text-align: center;
+    margin: 1em;
+}
+
+/*--------reviews--------*/
+
+.reviewcontainer {
+    display: flex;
+}
+
+.reviewcontainercomputer {
+    display: none;
+}
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+}
+
+.situationstegn img {
+    width: auto;
+    height: auto;
+    margin-bottom: 0.5em;
+}
+
+.anmeldelse p {
+    text-align: center;
+    margin: 1em 0;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.navn p,
+.dato p {
+    text-align: center;
+    margin: 0.2em 0;
+}
+
+/*--------too good to go + book bord--------*/
+
+.toogoodtogo {
+    background-color: var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15em;
+}
+
+.tgtgbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.text-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex: 2;
+    color: var(--white);
+    margin: 1em;
+}
+
+.tgtgtekst {
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+}
+
+.tgtgbillede {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.tgtgbillede img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-right: 0.5rem;
+}
+
+.bookbordknap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.bookbordforside {
+    background-color: var(--orange);
+    padding: 1rem 4rem;
+    text-align: center;
+}
+
+.bookbordforside a {
+    color: var(--white);
+}
+
+/*----------------------------------
+          BREAKFAST MENU
+----------------------------------*/
+/* body til breakfast menuen */
+.breakfastmenu {
+    margin: 0 0.5rem;
+}
+
+/* breakfast / lunch */
+.choosemenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1.875rem 3rem;
+}
+
+.text_deco {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* menuens overskrift */
+.menu_overskrift {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.menu_overskrift h1 {
+    font-size: 3.125rem;
+    font-weight: 300;
+    color: var(--orange);
+}
+
+.allday {
+    padding-top: 0.5rem;
+}
+
+/* build your own feast */
+.byof {
+    margin-top: 1.25rem;
+}
+
+.afkrydsning {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.5rem;
+}
+
+/* hele flexboxen med allergener */
+.allergener_flex {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.25rem;
+}
+
+/* hver enkelte allergi */
+.allergi_flex {
+    display: flex;
+    flex-direction: row;
+    padding-right: 1.25rem;
+}
+
+.allergi_img {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: 0.5rem;
+}
+
+/* tekst om taxes */
+.tax_p {
+    font-size: 0.75rem;
+}
+
+/* underoverskrifter i menuen */
+.menu_underoverskrift {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-top: 2.5rem;
+}
+
+.menu_ekstra_tekst {
+    padding-left: 0.5rem;
+}
+
+/* punkterne i menuen */
+.menu_punkter {
+    line-height: 1.875rem;
+}
+
+.menu_punkter_flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.velbekomme {
+    text-align: end;
+    margin: 3rem 0;
+}
+
+.line {
+    border-top: 2px solid black;
+    margin: 0.313rem 0;
+}
+
+/*----------------------------------
+            LUNCH MENU
+----------------------------------*/
+.lunch_overskrift h1 {
+    font-size: 3.125rem;
+    font-weight: 300;
+    color: var(--green);
+}
+
+.lunch_retter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.ingredienser {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+
+.menu_underoverskrift_snaps {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-top: 2.5rem;
+}
+
+.snaps {
+    text-align: end;
+}
+
+/*----------------------------------
+             BOOKING
+----------------------------------*/
+
+.bookingvalgmuligheder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book {
+    position: relative;
+    width: 20.188rem;
+    height: 15.25rem;
+    margin-top: 1.875rem;
+    margin-bottom: 1.25rem;
+}
+
+.book img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1.text-overlay {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    white-space: nowrap;
+    font-size: 2.5rem;
+    color: var(--white);
+}
+
+
+/*----------------------------------
+             BOOKING TABLE
+----------------------------------*/
+
+.dsbooktable img {
+    display: none;
+}
+
+.booktablebox h1 {
+    color: var(--orange);
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    font-size: 2.5rem;
+    margin-top: 0.625rem;
+    padding-top: 1.25rem;
+    padding-left: 0.625rem;
+}
+
+.booktablebox h2 {
+    color: var(--orange);
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
+    padding-top: 0.625rem;
+    padding-left: 1.063rem;
+}
+
+.booktablebox_lable {
+    color: var(--orange);
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
+    padding-top: 0.625rem;
+    padding-left: 1.063rem;
+}
+
+.booktablebox form {
+    margin: 1rem 0;
+}
+
+.orange-text {
+    color: var(--orange);
+}
+
+.breadcrumb {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 2.5rem;
+    border-bottom: 2px solid black;
+    width: 80%;
+    padding-bottom: 0.625rem;
+}
+
+.booktablebox {
+    background-color: var(--grey);
+    width: 100%;
+}
+
+.formchild3 {
+    padding-bottom: 3rem;
+}
+
+/*Dropdown venue*/
+
+.dropbtnvenue {
+    background-color: var(--grey);
+    color: var(--white);
+    padding: 1rem;
+    font-size: 1.875rem;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdownvenue {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdownvenue-content {
+    display: none;
+    position: absolute;
+    background-color: var(--grey);
+    min-width: 10rem;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.dropdownvenue-content a {
+    color: var(--white);
+    font-size: 1.875rem;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdownvenue:hover .dropdownvenue-content {
+    display: block;
+}
+
+
+/*drop down people*/
+
+.dropdownpeople {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtnpeople {
+    background-color: var(--grey);
+    color: var(--white);
+    padding: 1rem;
+    font-size: 1.875rem;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdownpeople-content {
+    display: none;
+    position: absolute;
+    background-color: var(--grey);
+    min-width: 10rem;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.dropdownpeople-content a {
+    color: var(--white);
+    font-size: 1.875rem;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdownpeople:hover .dropdownpeople-content {
+    display: block;
+}
+
+/* choose date*/
+
+.date-input {
+
+    padding: 1rem;
+    font-size: 1.875rem;
+    border: none;
+    background-color: var(--grey);
+    color: var(--white);
+    font-family: 'Helvetica Neue', sans-serif;
+    outline: none;
+}
+
+.date-input::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+/*drop down time*/
+
+.dropdowntime {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtntime {
+    background-color: var(--grey);
+    color: var(--white);
+    padding: 1rem;
+    font-size: 1.875rem;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdowntime-content {
+    display: none;
+    position: absolute;
+    background-color: var(--grey);
+    min-width: 10rem;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.dropdowntime-content a {
+    color: var(--white);
+    font-size: 1.875rem;
+    padding: 1rem;
+    text-decoration: none;
+    display: block;
+}
+
+
+.dropdowntime:hover .dropdowntime-content {
+    display: block;
+}
+
+/*drop down nedad pegende pil*/
+.dropbtnvenue::after,
+.dropbtnpeople::after,
+.dropbtntime::after {
+    content: '\25BC';
+    /* Unicode for en nedadrettet pil */
+    margin-left: 1.25rem;
+    font-size: 1.25rem;
+    vertical-align: middle;
+    color: var(--white);
+}
+
+/* next btn */
+
+.next-btn {
+    display: inline-block;
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 0.188rem 2.813rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+/*----------------------------------
+           BOOKING SIDE 2
+----------------------------------*/
+
+/*kontakt formular*/
+input[type="text"] {
+    margin-left: 1.25rem;
+    margin-top: 0.313rem;
+    margin-bottom: 0.625rem;
+    width: 87%;
+    padding: 0.625rem 0.625rem;
+    color: lightgray;
+    /* Tilføjer indvendig afstand (padding) */
+}
+
+/*----------------------------------
+           BOOKING SIDE 3
+----------------------------------*/
+/* confirmed besked */
+.confirmed {
+    margin-left: 0.938rem;
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+    color: var(--white);
+    font-size: 1.25rem;
+}
+
+/*----------------------------------
+           ABOUT US
+----------------------------------*/
+/*--- billede i starten---*/
+.familiebillede {
+    display: flex;
+    flex-direction: row;
+    padding: 3rem;
+}
+
+.familiebillede img {
+    width: 90%;
+}
+
+/*--- navne på familien---*/
+.familietext {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-left: 1%;
+}
+
+/*--- første tekststykke---*/
+
+.danestext {
+    text-align: left;
+    width: 80%;
+    padding-left: 2%;
+}
+
+/*--- Anden tekststykke til højre---*/
+
+.nordic {
+    text-align: right;
+    padding-right: 2%;
+    margin-left: 25%;
+    padding-top: 3rem;
+}
+
+/*--- overskrifter---*/
+.nordic h1 {
+    text-decoration: underline;
+    padding-bottom: 5%;
+}
+
+
+.danestext h1 {
+    text-decoration: underline;
+    padding-bottom: 5%;
+}
+
+/*--- mindre overskrifter---*/
+.minioverskrift {
+    text-decoration: underline;
+    padding-bottom: 2%;
+    padding-top: 5%;
+}
+
+
+/*--- de tre store billeder---*/
+.danishdesign {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    justify-content: space-around;
+}
+
+.danishdesign img {
+
+    width: 30%;
+    height: auto;
+}
+
+/* hygge definition */
+.hyggedefi {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.hyggedefi p {
+    padding: 1%;
+    font-size: 0.8rem;
+}
+
+.hyggedefi h1 {
+    font-size: 1.25rem;
+}
+
+.hyggedefi h2 {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/*--- billede med knap---*/
+
+.moreinfo {
+    background-color: var(--orange);
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.moreinfo a {
+    color: var(--white);
+}
+
+.merch {
+    position: relative;
+    text-align: center;
+    padding-top: 3rem;
+}
+
+.merch img {
+    width: 55%;
+}
+
+/*----------------------------------
+               INFO
+----------------------------------*/
+/*--- gemmer computer menu---*/
+
+.infocomputer {
+    display: none;
+}
+
+.instacomputer {
+    display: none;
+}
+
+
+/*--- infoskilt til mobile---*/
+.flexinfo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flexinfo h1 {
+    padding-top: 10%;
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+.flexinfo img {
+    width: 93%;
+}
+
+.flexinfo p {
+    text-align: right;
+    width: 80%;
+    padding-bottom: 10%;
+    padding-top: 5%;
+}
+
+/*--- instagram --*/
+
+.instaflex {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 15%;
+}
+
+.instaflex img {
+    width: 100%;
+}
+
+
+/*----------------------------------
+             FOOTER
+----------------------------------*/
+footer {
+    margin-top: 1.25rem;
+    background-color: var(--grey);
+}
+
+footer div {
+    color: var(--white);
+}
+
+.some {
+    width: 3.125rem;
+    height: auto;
+}
+
+.footer_box1 {
+    padding: 1rem 2.5rem 0 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_box2 {
+    padding: 1rem 2.5rem 0 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_box3 {
+    padding: 1.25rem 2.5rem 0 2.5rem;
+}
+
+.map {
+    margin-top: 0.5rem;
+    width: 100%;
+    height: 9.375rem;
+    border: 0;
+}
+
+.footer_box4 {
+    padding: 1.25rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_line {
+    border-top: 2px solid var(--white);
+    margin: 0.313rem 0;
+}
+
+.venues {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.venue_canggu {
+    text-decoration: underline;
+    color: var(--orange);
+}
+
+.venue_other {
+    color: var(--white);
+}
+
+.footer_desktop {
+    display: none;
+}
+
+/*----------------------------------
+             404 SITE
+----------------------------------*/
+/*--- klinker---*/
+.firebody {
+    background-image: url(img/tiles1.webp);
+}
+
+
+/*--- kaffekop---*/
+.coffeecup {
+    position: relative;
+    text-align: center;
+}
+
+.coffeecup img {
+    width: 95%;
+}
+
+.h1cup {
+    text-align: center;
+    padding-top: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/*--- tekst i koppen---*/
+.centeredtext {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*--- tilbageknap---*/
+.goback {
+    background-color: var(--orange);
+    width: 8.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.goback a {
+    color: var(--white);
+}
+
+/*----------------------------------
+        MEDIA QUERIES: DESKTOP
+----------------------------------*/
+@media screen and (min-width: 1024px) {
+
+    /*--------BASICS--------*/
+    h1 {
+        font-size: 3.75rem;
+    }
+
+    h2 {
+        font-size: 3.125rem;
+    }
+
+    p {
+        font-size: 1.563rem;
+    }
+
+    a {
+        font-size: 1.563rem;
+    }
+
+    /*--------INDEX--------*/
+    .startsidebilleder {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .startsidebilleder div {
+        flex: 1;
+        margin-bottom: 0;
+        margin-right: 1%;
+    }
+
+    .startsidebilleder div:last-child {
+        margin-right: 0;
+    }
+
+    .startsidebilleder img {
+        object-fit: cover;
+        height: 28em;
+    }
+
+    .startbillede-overskrift {
+        font-size: 3.75rem;
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+    }
+
+    .startunderoverskrift {
+        font-size: 1.563rem;
+        position: absolute;
+        bottom: 47%;
+        left: 50%;
+        width: 15.625rem;
+    }
+
+    /*--------BURGERMENU--------*/
+    .nav__link {
+        display: block;
+        position: static;
+        width: auto;
+        margin-right: 1.25rem;
+        background: none;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .nav__link a {
+        display: inline-block;
+        padding: 0.938rem 1.25rem;
+        font-size: 1.875rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    /*--------CANGGU--------*/
+    /*--------slideshow--------*/
+    .forsidebilleder {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .forsidebilleder div {
+        width: 32%;
+        margin-bottom: 0;
+    }
+
+    .forsidebilleder img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .forsidebilledetext {
+        font-size: 5em;
+    }
+
+    /*--------velkommen tekst--------*/
+    .velkomstoverskrift,
+    .velkomsttext {
+        width: 50%;
+    }
+
+    .menutext a {
+        font-size: 3.75rem;
+    }
+
+    .menutext p {
+        font-size: 1.563rem;
+    }
+
+    /*--------content billeder--------*/
+    .contentforside {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contentbilleder {
+        width: 100%;
+        max-width: 75rem;
+        margin: 1em;
+    }
+
+    .contentbilleder img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        aspect-ratio: 9 / 14;
+    }
+
+    .reviewcontainer {
+        padding: 3rem;
+        justify-content: center;
+    }
+
+    .reviews {
+        padding: 2%;
+    }
+
+    /*--------bookbordknap--------*/
+
+    .bookbordforside {
+        padding: 1rem 5rem;
+
+    }
+
+    .bookbordforside a {
+        font-size: 2.5rem;
+    }
+
+    /*--------too good to go--------*/
+    .toogoodtogo {
+        height: auto;
+    }
+
+    .tgtgbox {
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+        height: auto;
+    }
+
+    .text-section {
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+        font-size: 2em;
+    }
+
+    .tgtgtekst {
+        font-size: 2.3em;
+    }
+
+    .text-box {
+        padding: 0 3rem;
+    }
+
+    .tgtgbillede img {
+        padding: 1.5rem;
+        padding-right: 10rem;
+    }
+
+    /*--------BREAKFAST MENU--------*/
+
+    .reviewcontainer {
+        display: none;
+    }
+
+    .reviewcontainercomputer {
+        display: flex;
+        padding: 5rem;
+    }
+
+    /*--------BREAKFAST MENU--------*/
+    .breakfastmenu {
+        margin: 0 2rem;
+    }
+
+    .choosemenu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 5rem 35%;
+    }
+
+    .first_section_menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 5rem;
+    }
+
+    .menu_overskrift h1 {
+        font-size: 5rem;
+    }
+
+    .allday {
+        padding-top: 1rem;
+        padding-left: 2rem;
+    }
+
+    .byof {
+        text-align: end;
+    }
+
+    .allergener_flex {
+        justify-content: space-between;
+    }
+
+    .allergi_img {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+
+    .menu_desktop_flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 5rem;
+    }
+
+    .menu_underoverskrift {
+        margin-top: 6rem;
+    }
+
+    .menu_punkter {
+        line-height: 3rem;
+    }
+
+    /*--------LUNCH MENU--------*/
+    .lunchmenu_flex_venstre {
+        width: 50%;
+    }
+
+    .lunchmenu_flex_hoejre {
+        width: 40%;
+        padding-top: 1.9rem;
+    }
+
+    /*--------BOOKING DS--------*/
+
+    .bookingvalgmuligheder {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .book {
+        width: 34.375rem;
+        height: 34.375rem;
+    }
+
+    .book img {
+        padding: 1.875rem;
+    }
+
+
+    /*--------BOOKING TABLE DS--------*/
+
+    .dsbooktable img {
+        display: block;
+        background-color: var(--grey);
+        padding-left: 7rem;
+
+    }
+
+    .dsbooktable {
+        display: flex;
+        margin-top: 1.25rem;
+    }
+
+
+    .breadcrumb {
+        padding-top: 1.875rem;
+        font-size: 1.063rem;
+        width: 30%;
+    }
+
+    .booktablebox {
+        background-color: var(--grey);
+        width: 100%;
+        padding-left: 5rem;
+    }
+
+    .booktablebox form {
+        width: 50%;
+    }
+
+    /* next btn */
+
+    .next-btn {
+        background-color: var(--orange);
+        color: var(--white);
+        padding: 0.5rem 5rem;
+        margin: 1.25rem;
+        font-size: 1.25rem;
+        border: none;
+        cursor: pointer;
+        font-family: 'Helvetica Neue', sans-serif;
+    }
+
+
+
+    /*--------ABOUT US--------*/
+
+    .familiebillede img {
+        width: 35%;
+    }
+
+    .familiebillede {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 5%;
+    }
+
+    .danestext {
+        width: 70%;
+    }
+
+    .merch img {
+        width: 50%;
+        padding: 5%;
+    }
+
+    .moreinfo {
+        padding: 1rem 1.5rem;
+    }
+
+    .moreinfo a {
+        font-size: 2rem;
+    }
+
+    .nordic {
+        margin-left: 30%;
+    }
+
+    .hyggedefi p {
+        font-size: 1.25rem;
+    }
+
+    .hyggedefi h1 {
+        font-size: 2.5rem;
+    }
+
+    .hyggedefi h2 {
+        font-size: 1.563rem;
+    }
+
+    .hyggedefi {
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+
+
+    /*--------INFO--------*/
+
+    .instaflex {
+        display: none;
+    }
+
+    .flexinfo {
+        display: none;
+    }
+
+    .infocomputer {
+        display: flex;
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+
+    .instacomputer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 3rem;
+    }
+
+    .instacomputer img {
+        width: 100%;
+    }
+
+    .infocomputer img {
+        width: 80%;
+    }
+
+    .inforow {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .inforow img {
+        width: 60%;
+        padding-top: 10%;
+    }
+
+    .inforow p {
+        text-align: right;
+        padding-top: 10%;
+        padding-bottom: 3%;
+        padding-right: 2%;
+        margin-left: 5%;
+    }
+
+
+    /*--------FOOTER--------*/
+
+    .footer_mobile {
+        display: none;
+    }
+
+    .footer_desktop {
+        display: block;
+        padding: 5rem;
+    }
+
+    .footer_section1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .some_flex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .some_flex img {
+        width: 10rem;
+    }
+
+    .footer_section2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
+        padding-top: 2rem;
+    }
+
+    .map {
+        width: 28rem;
+        height: 15rem;
+
+    }
+
+    .contactinfo p {
+        text-align: right;
+    }
+
+    .footer_section3 {
+        padding-top: 3rem;
+    }
+
+    /*--------404--------*/
+
+    .h1cup {
+        padding-top: 5%;
+    }
+
+    .coffeecup {
+        width: 55%;
+        left: 24%;
+    }
+
+    .goback {
+        width: 21.25rem;
+        height: 4.688rem;
+        margin-top: 16rem;
+        margin-left: 1%;
+    }
+
+    .goback a {
+        font-size: 1.875rem;
+    }
+
+}
